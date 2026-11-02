@@ -14,6 +14,20 @@
   .cta-section { text-align: center; padding: 3rem 0; background: #f8fafc; border-radius: 12px; margin: 2rem 0; }
   .cta-button { display: inline-block; background: #0f172a; color: #ffffff; text-decoration: none; padding: 1rem 2rem; font-size: 1.125rem; font-weight: 600; border-radius: 8px; transition: background 0.2s; border: none; cursor: pointer; }
   .cta-button:hover { background: #1e293b; }
+
+  /* Resultados reales */
+  .results { padding: 3rem 0 2rem; }
+  .results h2 { font-size: 1.75rem; color: #0f172a; text-align: center; margin-bottom: 0.5rem; }
+  .results-intro { font-size: 0.95rem; color: #64748b; text-align: center; margin-bottom: 2.5rem; max-width: 50ch; margin-left: auto; margin-right: auto; }
+  .results-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2rem; }
+  .result-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; text-align: center; }
+  .result-number { font-size: 2.5rem; font-weight: 700; color: #0f172a; line-height: 1; margin-bottom: 0.5rem; }
+  .result-label { font-size: 0.9rem; color: #475569; line-height: 1.5; }
+  .results-note { font-size: 0.875rem; color: #64748b; text-align: center; margin-top: 0.5rem; }
+  @media (max-width: 640px) {
+    .results-grid { grid-template-columns: 1fr; }
+    .results h2 { font-size: 1.5rem; }
+  }
   .cta-hint { margin-top: 0.75rem; font-size: 0.875rem; color: #64748b; }
   footer { margin-top: 4rem; padding: 2rem 0; border-top: 1px solid #e2e8f0; text-align: center; }
   .footer-cta { margin-top: 1rem; }
@@ -26,6 +40,26 @@
     <h1>Reporte Técnico Prioritario</h1>
     <p class="subtitle">ADA — Análisis técnico detallado y prioritario para tu proyecto. Entrega rápida, recomendaciones accionables y soporte directo.</p>
   </header>
+
+  <section class="results">
+    <h2>Resultados reales de auditorías ADA</h2>
+    <p class="results-intro">Datos de auditorías de accesibilidad hechas por Ranuk IT Solutions. Sin inventar nada.</p>
+    <div class="results-grid">
+      <div class="result-card">
+        <div class="result-number">7</div>
+        <div class="result-label">violaciones WCAG encontradas en un sitio corporativo</div>
+      </div>
+      <div class="result-card">
+        <div class="result-number">36</div>
+        <div class="result-label">nodos con problemas de accesibilidad en un e-commerce</div>
+      </div>
+      <div class="result-card">
+        <div class="result-number">4</div>
+        <div class="result-label">violaciones de impacto serious que bloquean a usuarios</div>
+      </div>
+    </div>
+    <p class="results-note">Cada reporte incluye una lista accionable de qué arreglar y cómo.</p>
+  </section>
 
   <section class="cta-section">
     <h2>¿Listo para tu reporte?</h2>
