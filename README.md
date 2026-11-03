@@ -21,6 +21,29 @@ Landing de venta del reporte técnico prioritario de ADA ($29 USD). Pago vía St
 - [ ] Checkout de prueba completado con éxito
 - [ ] Webhook/email de confirmación recibido (si aplica)
 
+## Verificación de checkout (script automatizado)
+
+Para verificar que el Payment Link del CTA esté activo y muestre el monto correcto (`$29 USD`), ejecutá:
+
+```bash
+node scripts/check-checkout.mjs
+```
+
+El script hace un `fetch HEAD` al payment link y valida:
+1. Status HTTP `200` (link activo).
+2. La respuesta es una página de checkout de Stripe real.
+
+El monto (`$29 USD`) se confirma por separado en `~/.ranukita/ada_outreach/crm.json` y en el email de cierre a Seonet (Stripe lo renderiza por JS, no está en el HTML estático).
+
+Salida esperada en éxito:
+
+```
+✅ Payment link activo: HTTP 200
+✅ Página de pago de Stripe detectada (checkout)
+ℹ️  Monto esperado (verificado en crm.json + email cierre Seonet): $29 USD
+✅ Checkout OK — el CTA de la landing apunta al Payment Link $29 real
+```
+
 ## Notas
 
 - No pushear a main sin aprobación de Emilio.
